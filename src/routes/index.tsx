@@ -163,7 +163,7 @@ function Index() {
               <div key={r.n} className="rounded-2xl border bg-card p-6">
                 <div className="flex justify-center gap-1 text-primary">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
                 <p className="mt-4 text-sm text-muted-foreground">"{r.q}"</p>
-                <div className="mx-auto mt-6 flex h-12 w-12 items-center justify-center rounded-full bg-accent font-bold text-accent-foreground">{r.n.split(" ").slice(-1)[0][0]}</div>
+                <div className="mx-auto mt-6 flex h-12 w-12 items-center justify-center rounded-full bg-accent font-bold text-accent-foreground">{r.n.charAt(r.n.lastIndexOf(" ") + 1)}</div>
                 <p className="mt-2 font-semibold">{r.n}</p>
                 <p className="text-xs text-primary">{r.r}</p>
               </div>
